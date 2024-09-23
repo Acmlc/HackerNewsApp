@@ -8,9 +8,9 @@
 
 ### Prerequisites
 
-Get the newest vscode => [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+Get the newest vscode => (https://code.visualstudio.com/download)
 
-Get the newest node => [https://nodejs.org](https://nodejs.org)
+Get the newest node => (https://nodejs.org)
 
 Get the newest Angular CLI => (https://www.npmjs.com/package/@angular/cli)
 
