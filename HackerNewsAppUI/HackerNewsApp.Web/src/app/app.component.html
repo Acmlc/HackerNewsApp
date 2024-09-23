@@ -1,0 +1,18 @@
+<h1>Hacker News Newest Stories</h1>
+<div>
+  <input placeholder="Search..." (input)="onSearch($event)" />
+  @if (news$ | async;as news){
+    <ul>
+      <li *ngFor="let t of news">
+        <div class="item" *ngIf="t != null && t.url != null">
+          <a target="_blank" href="{{t?.url}}">{{t.title}} </a>
+        </div>      
+      </li>
+    </ul>
+    <div>
+    <button (click)="onPageChange(pageNumber - 1)" [disabled]="pageNumber === 1">Previous</button>
+    <label>Page {{ pageNumber }}</label>
+    <button (click)="onPageChange(pageNumber + 1)">Next</button>
+    </div>
+  }
+</div>
