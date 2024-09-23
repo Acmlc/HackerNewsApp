@@ -1,4 +1,4 @@
-# Read me first
+# Read me
 ## Built with
 
 * .Net 8.0 and Angular
@@ -26,6 +26,6 @@ Get the newest Angular CLI => (https://www.npmjs.com/package/@angular/cli)
 
 1. Open a new terminal and run the command, ng serve --open
 
-1. Browser should pop open in local host and see the list of stories (first run takes longer to load the stories please wait for couple seconds, if it doesn't refresh the page)
+1. Browser should pop open in local host and see the list of stories (first run takes longer to load the stories please wait for couple seconds, if it doesn't then refresh the page)
 
   
