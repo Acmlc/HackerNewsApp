@@ -15,7 +15,7 @@ Get the newest node => (https://nodejs.org)
 
 Get the newest Angular CLI => (https://www.npmjs.com/package/@angular/cli)
 
-### Installation
+### Steps for local run
 
 1. Clone the repository
 
