@@ -20,7 +20,7 @@ Get the newest Angular CLI => (https://www.npmjs.com/package/@angular/cli)
 
 1. First run HackerNewsApp.sln (in visual studio) and see the Swagger page
 
-1. Navigate into the HackerNewsApp.UI repository
+1. Navigate into the HackerNewsApp.UI 
 
 1. Open the project in VS Code, run the command code .
 
