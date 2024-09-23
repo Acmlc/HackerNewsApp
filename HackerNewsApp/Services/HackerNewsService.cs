@@ -2,11 +2,11 @@
 {
     public class HackerNewsService : IHackerNewsService
     {
-        private HttpClient _client = new HttpClient();
+        private readonly HttpClient _client;
         private readonly ILogger<HackerNewsService> _logger;
-        public HackerNewsService(HttpClient client, ILogger<HackerNewsService> logger)
+        public HackerNewsService(ILogger<HackerNewsService> logger)
         {
-            _client = client;
+            _client =  new HttpClient();
             _logger = logger;
         }
 
