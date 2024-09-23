@@ -26,6 +26,6 @@ Get the newest Angular CLI => [https://www.npmjs.com/package/@angular/cli] (http
 
 1. Open a new terminal and run the command, ng serve --open
 
-1. Browser should pop open in local host and see the list of stories (first run take couple seconds to load the stories, if it doesn't refresh the page)
+1. Browser should pop open in local host and see the list of stories (first run takes longer to load the stories please wait for couple seconds, if it doesn't refresh the page)
 
   
