@@ -12,7 +12,7 @@ Get the newest vscode => [https://code.visualstudio.com/download](https://code.v
 
 Get the newest node => [https://nodejs.org](https://nodejs.org)
 
-Get the newest Angular CLI => [https://www.npmjs.com/package/@angular/cli] (https://www.npmjs.com/package/@angular/cli)
+Get the newest Angular CLI => (https://www.npmjs.com/package/@angular/cli)
 
 ### Installation
 
