@@ -2,6 +2,7 @@
 using HackerNewsApp.Services;
 using LazyCache;
 using MediatR;
+using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 
 namespace HackerNewsApp.Queries
@@ -11,6 +12,10 @@ namespace HackerNewsApp.Queries
         private IAppCache _cache;
         private readonly IHackerNewsService _hackerNewsService;
 
+        private static MemoryCacheEntryOptions _cacheSettings => new MemoryCacheEntryOptions
+        {
+            AbsoluteExpiration = DateTime.UtcNow.AddMinutes(5)
+        };
         public GetHackerNewsByNameHandler(IAppCache cache, IHackerNewsService hackerNewsService)
         {
             _cache = cache;
@@ -101,7 +106,7 @@ namespace HackerNewsApp.Queries
                    throw new Exception(ex.Message);
                 }
                return story;
-            });
+            }, _cacheSettings);
         }
     }
 }
