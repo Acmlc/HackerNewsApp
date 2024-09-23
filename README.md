@@ -7,6 +7,7 @@
 ## Getting Started
 
 ### Prerequisites
+Get the newest Visual Studio => (https://visualstudio.microsoft.com/downloads/)
 
 Get the newest vscode => (https://code.visualstudio.com/download)
 
