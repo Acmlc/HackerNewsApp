@@ -70,9 +70,8 @@ namespace HackerNewsApp.Queries
 
         private List<HackerNewsStory?> SearchNewsBySearchTerm(List<HackerNewsStory?> stories, string searchTerm)
         {
-            var search = searchTerm.ToLower();
             stories = stories.Where(s =>
-                               s?.Title.IndexOf(search, StringComparison.CurrentCultureIgnoreCase) > -1)
+                               s?.Title.IndexOf(searchTerm, StringComparison.CurrentCultureIgnoreCase) > -1)
                                .ToList();
 
             return stories;
