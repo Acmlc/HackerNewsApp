@@ -5,7 +5,6 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Swashbuckle.AspNetCore.Annotations;
-using System.Net;
 
 namespace HackerNewsApp.Controllers
 {
@@ -37,10 +36,10 @@ namespace HackerNewsApp.Controllers
         [SwaggerOperation(OperationId = "HackerNews_GetNewestStories")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<List<HackerNewsStory>>> Get([FromQuery] QueryParams requestParameters)
+        public async Task<ActionResult<IEnumerable<HackerNewsStory>>> Get([FromQuery] QueryParams requestParameters)
         {
             try {
-                List<HackerNewsStory?> result = await _mediator.Send(new GetHackerNewsByName(requestParameters));
+                IEnumerable<HackerNewsStory> result = await _mediator.Send(new GetHackerNewsByName(requestParameters));
                 return Ok(result);
             }
             catch (Exception ex){

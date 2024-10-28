@@ -5,7 +5,7 @@
     <ul>
       <li *ngFor="let t of news">
         <div class="item" *ngIf="t != null && t.url != null">
-          <a target="_blank" href="{{t?.url}}">{{t.title}} </a>
+          <a target="_blank" href="{{t.url}}">{{t.title}} </a>
         </div>      
       </li>
     </ul>

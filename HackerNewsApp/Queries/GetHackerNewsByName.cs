@@ -3,7 +3,7 @@ using MediatR;
 
 namespace HackerNewsApp.Queries
 {
-    public class GetHackerNewsByName : IRequest<List<HackerNewsStory?>>
+    public class GetHackerNewsByName : IRequest<IEnumerable<HackerNewsStory>>
     {
         public string? searchTerm { get; }
         public int pageSize { get; }
