@@ -34,7 +34,7 @@ namespace HackerNewsApp.Queries
                 var hackerNewsApiResponse = await _hackerNewsService.NewStoriesAsync();
                 if (hackerNewsApiResponse.IsSuccessStatusCode)
                 {
-                    var hackerNewsIdResult = hackerNewsApiResponse.Content.ReadAsStringAsync().Result;
+                    var hackerNewsIdResult = await hackerNewsApiResponse.Content.ReadAsStringAsync();
 
                     var storyIds = JsonConvert.DeserializeObject<IEnumerable<int>>(hackerNewsIdResult);
 
@@ -97,7 +97,7 @@ namespace HackerNewsApp.Queries
                     var response = await _hackerNewsService.GetStoryByIdAsync(storyId);
                     if (response.IsSuccessStatusCode)
                     {
-                        var storyResponse = response.Content.ReadAsStringAsync().Result;
+                        var storyResponse = await response.Content.ReadAsStringAsync();
                         story = JsonConvert.DeserializeObject<HackerNewsStory>(storyResponse)!;
                     }
                 }
